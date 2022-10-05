@@ -21,15 +21,16 @@ print("""
 "\nLa frase en miuscules es: " + minuscules)
 
 caracter = input("\nDisme un caracter de la frase que has escrit: ")
+caractermin = str(caracter.lower())
 
 #Retorna la primer coincidencia basat amb la variable caracter
-fcaracter = minuscules.find(caracter) + 1
+fcaracter = minuscules.find(caractermin) + 1
 
 #Retorna l'última coincidencia basat amb la variable caracter
-lcaracter = minuscules.rfind(caracter) + 1
+lcaracter = minuscules.rfind(caractermin) + 1
 
 #Retorna el numero de coincidencies basat amb la variable caracter
-ncaracters = minuscules.count(caracter)
+ncaracters = minuscules.count(caractermin)
 
 #Compta totes les vocals de la frase
 vocals = minuscules.count("a") + minuscules.count("e") + minuscules.count("i") + minuscules.count("o") + minuscules.count("u")
