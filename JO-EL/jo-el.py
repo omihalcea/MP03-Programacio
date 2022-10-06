@@ -1,0 +1,2 @@
+capa = int(input())
+
