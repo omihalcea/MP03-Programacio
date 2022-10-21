@@ -1,8 +1,8 @@
-i = 5
-l = []
+n = int(input())
 
-while i != 0:        
-    l.append(input())
-    i -= 1
+while n > 0:
+    numero = input()
+    num = numero.split()
 
-print(l)
+    n -= 1
+print(num)

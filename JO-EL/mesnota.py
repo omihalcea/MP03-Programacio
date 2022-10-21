@@ -1,5 +1,10 @@
-n = input("Escriu 4 numeros: ")
+diccionari = {"Pepe":[], "Manolo":[], "Xeng":[]}
 
-l = [int(n[0:1]), int(n[1:2]), int(n[2:3]), int(n[3:4])]
-
-print("La suma dels nombre es: " + l)
+n = input("Disme un nom: ")
+x = int(input("Introdueix un pes: "))
+try: 
+    diccionari[n].append(x)
+    print("Pesos de Pepe",diccionari["Pepe"])
+except:
+    diccionari[n]=[x]
+    print("S'ha creat l'usuari " + n + " i se li ha afegit el pes",x)
