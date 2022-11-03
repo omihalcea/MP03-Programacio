@@ -1,4 +1,7 @@
-import prova
+from Mitjana import *
+from IMC import *
+from Hora import *
+from Temperatura import *
 from os import system
 p = False
 
@@ -14,31 +17,16 @@ Que vols fer?
 
 """))
         if o == 1:
-            num1 = input("Disme un número: ")
-            num2 = input("Un altre: ")
-            mig = int(num1) + int(num2)
-            mitjana = mig // 2
-            print(mitjana)
+            mitjana()
             p = True
         elif o == 2:
-            pes = int(input("Quant peses? "))
-            altura = float(input("Quant medeixes? "))
-            estatura = altura ** 2
-            imc = pes // estatura
-            print("\nEl teu IMC es " + str(imc))
+            imc()
             p = True
         elif o == 3:
-            celsius = float(input("Disme la temperatura en ºC: "))
-            fahrenheit = (celsius * 1.8) + 32
-            print("\nLa temperatura en Farhenheit es " + str(fahrenheit))
+            temperatura()
             p = True
         elif o == 4:
-            hora = int(input("Disme l'hora: "))
-            minuts = int(input("Disme els minuts: "))
-            h = hora * 60
-            totalM = h + minuts
-            segons = totalM * 60
-            print("\nEls segons son " + str(segons))
+            hora()
             p = True
         else:
             system("clear")

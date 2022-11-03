@@ -1,8 +1,6 @@
-n = int(input())
+i = input().split(";")
 
-while n > 0:
-    numero = input()
-    num = numero.split()
-
-    n -= 1
-print(num)
+for x in i:
+    if len(x) >= 10:
+        i[i.index(x)] = "ERROR"
+print(";".join(i))
