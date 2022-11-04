@@ -36,16 +36,21 @@ while puntuacio1 < 3 or puntuacio2 < 3:
         res = int(input())
         preguntes.pop(pregunta)
         rang -= 1
-        if t1 == 1 and res == preguntes[pregunta + 1]:
+        if t1 == 1 and res == preguntes[pregunta][1]:
+            print("\nResposta correcta")
             puntuacio1 += 1
-        elif t2 == 1 and res == preguntes[pregunta + 1]:
+
+        elif t2 == 1 and res == preguntes[pregunta][1]:
+            print("\nResposta correcta")
             puntuacio2 += 2
-        elif t1 == 1 and res != preguntes[pregunta + 1]:
-            print("Resposta incorrecta")
+
+        elif t1 == 1 and res != preguntes[pregunta][1]:
+            print("\nResposta incorrecta")
             t1 = 2
             t2 = 1
-        elif t2 == 1 and res != preguntes[pregunta + 1]:
-            print("Resposta incorrecta")
+            
+        elif t2 == 1 and res != preguntes[pregunta][1]:
+            print("\nResposta incorrecta")
             t1 = 1
             t2 = 2
         np -= 1
