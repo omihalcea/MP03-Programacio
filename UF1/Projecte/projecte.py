@@ -10,9 +10,9 @@ puntuacio3 = int()
 puntuacio4 = int()
 jugadors = []
 preguntes = [
-    ["Quants anys tinc? \n[1] 1 \n[2] 2 \n[3] 3", 2], 
-    ["T'agrada el Pene? \n[1] SI \n[2] Potser \n[3] No estic del tot segur", 3], 
-    ["Ets menor \n[1] SI \n[2] NO" "\n[3] NO SE", 2]
+    ["Qui va ser el primer president d'Estats Units?",[["Abraham Lincon", False], ["George Washinton", True], ["Donald Trump", False]]], 
+    ["T'agrada el Pene? \n[1] SI \n[2] Potser \n[3] No estic del tot segur",[["Abraham Lincon", False], ["George Washinton", True], ["Donald Trump", False]]], 
+    ["Ets menor \n[1] SI \n[2] NO" "\n[3] NO SE",[["Abraham Lincon", False], ["George Washinton", True], ["Donald Trump", False]]]
     ]
 
 numjugadors = int(input("""\n─────¡¡¡Benvinguts al Trivia Pursuit!!!─────
@@ -28,7 +28,7 @@ Per a continuar heu d'introduir els vostres noms
 Introdueix el numero de jugadors (2-4): """))
 
 los = numjugadors
-
+numr = [1, 2, 3]
 while numjugadors > 0:
     nomp = input("Introduiu el nom del jugador " + str(nombre) + ": ")
     jugadors.append(nomp)
@@ -40,7 +40,11 @@ while puntuacio1 < 3 and puntuacio2 < 3 and puntuacio3 < 3 and puntuacio4 < 3 an
     print("\nEs el torn de", str(jugadors[turno]))
     while np > 0:
         random.shuffle(preguntes)
+        random.shuffle(preguntes[0][1])
         print("\n" + preguntes[0][0] + "\n")
+        for i in range(1, 4):
+            print("[" + str(i) + "]",preguntes[0][1][i-1][0])
+
         res = int(input())
         rang -= 1
         if res == preguntes[0][1]:
