@@ -40,7 +40,9 @@ print("""
 
           PER A UNA MILLOR EXPERIENCIA
         HAS DE JUGAR EN PANTALLA COMPLETA
-
+""")
+time.speep(3)
+print("""            
             Prem ENTER per a continuar
 """)
 input()
